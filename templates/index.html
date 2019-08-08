@@ -6,6 +6,8 @@
   </head>
   <body>
     hello world
-    {{welcome}}
+    {%for course in allCourses%}
+    {{course.title}}
+    {%endfor%}
   </body>
 </html>
