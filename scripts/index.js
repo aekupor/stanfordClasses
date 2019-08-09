@@ -23,3 +23,5 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+// TODO: when user clicks on 'x' button on modal, close the window
