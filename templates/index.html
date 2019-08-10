@@ -3,6 +3,9 @@
 <head>
   <meta charset="utf-8">
   <title>Stanford CS Planner</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
   <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
@@ -17,43 +20,26 @@
     background: #008080;
   }
 
-  /* The Modal (background) */
-  .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  /* Popover */
+  .popover {
+    border: 2px dotted red;
   }
-
-  /* Modal Content */
-  .modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-  }
-
-  /* The Close Button */
-  .close {
-    color: #aaaaaa;
-    float: right;
+  /* Popover Header */
+  .popover-title {
+    background-color: #73AD21;
+    color: #FFFFFF;
     font-size: 28px;
-    font-weight: bold;
+    text-align:center;
   }
-
-  .close:hover,
-  .close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
+  /* Popover Body */
+  .popover-content {
+    background-color: coral;
+    color: #FFFFFF;
+    padding: 25px;
+  }
+  /* Popover Arrow */
+  .arrow {
+    border-right-color: red !important;
   }
 </style>
 </head>
@@ -69,18 +55,17 @@
       Type = {{course.subject}}
     </div>
     <div class="mdl-card__actions mdl-card--border">
-      <a id="myBtn" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+      <a id="myBtn" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="#" data-toggle="popover" title="CS106A" data-content="1 description, more info here">
         View More
-        <div id="myModal" class="modal">
-          <div class="modal-content">
-            <span class="close">&times;</span>
-            <p>Some text in the Modal..</p>
-          </div>
-        </div>
       </a>
     </div>
   </div>
   {%endfor%}
-  <script type="text/javascript" src="../scripts/index.js"></script>
+<script>
+$(document).ready(function(){
+  $('[data-toggle="popover"]').popover();
+});
+</script>
+  <!-- <script type="text/javascript" src="../scripts/index.js"></script> -->
 </body>
 </html>
