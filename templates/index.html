@@ -44,17 +44,31 @@
     display: inline-block;
     font-size: 10px;
   }
-</style>
+  </style>
+  <script>
+  function allowDrop(ev) {
+    ev.preventDefault();
+  }
+
+  function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+  }
+
+  function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+  }
+  </script>
 </head>
 <body>
-
   <div class="row">
     <div class="column" style="background-color:#aaa;">
       <h2>Year 1</h2>
-        <div class="innerColumn" style="background-color:#bbb;">
+        <div class="innerColumn" style="background-color:#bbb;" ondrop="drop(event)" ondragover="allowDrop(event)">
           {%for course in allCourses%}
           {%if course.defaultQ == "1A"%}
-          <div class="course">
+          <div class="course" id="{{course.title}}" draggable="true" ondragstart="drag(event)">
             <div class="title">
               {{course.title}}
             </div>
@@ -71,10 +85,10 @@
           {%endif%}
           {%endfor%}
         </div>
-        <div class="innerColumn" style="background-color:#aaa;">
+        <div class="innerColumn" style="background-color:#aaa;" ondrop="drop(event)" ondragover="allowDrop(event)">
         {%for course in allCourses%}
         {%if course.defaultQ == "1W"%}
-        <div class="course">
+        <div class="course" id="{{course.title}}" draggable="true" ondragstart="drag(event)">
           <div class="title">
             {{course.title}}
           </div>
@@ -91,7 +105,7 @@
         {%endif%}
         {%endfor%}
         </div>
-        <div class="innerColumn" style="background-color:#bbb;"></div>
+        <div class="innerColumn" style="background-color:#bbb;" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
     </div>
     <div class="column" style="background-color:#bbb;">
       <h2>Year 2</h2>

@@ -17,6 +17,8 @@ allCourses = []
 
 CS106A = Course("CS106A", 5, "1A", "Engr")
 allCourses.append(CS106A)
+other = Course("other", 5, "1A", "Engr")
+allCourses.append(other)
 CS106B = Course("CS106B", 5, "1W", "Engr")
 allCourses.append(CS106B)
 

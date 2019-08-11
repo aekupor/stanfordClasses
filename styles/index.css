@@ -8,6 +8,7 @@ body {
 .column {
   float: left;
   width: 50%;
+  height: 300px;
   padding: 10px;
   /* height: 300px; /* Should be removed. Only for demonstration */ */
 }
@@ -15,6 +16,7 @@ body {
 .innerColumn{
   float: left;
   width: 33%;
+  height: 300px;
   padding: 10px;
   /* height: 200px; */
 }
