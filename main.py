@@ -7,6 +7,7 @@ jinja_env = jinja2.Environment(
 )
 
 class Course:
+    # add quarters offered, description, pre-reqs
     def __init__(self, title, units, defaultQ, subject):
         self.title = title
         self.units = units
@@ -17,7 +18,7 @@ allCourses = []
 
 CS106A = Course("CS106A", 5, "1A", "Engr")
 allCourses.append(CS106A)
-other = Course("other", 5, "1A", "Engr")
+other = Course("other", 5, "1A", "Other")
 allCourses.append(other)
 CS106B = Course("CS106B", 5, "1W", "Engr")
 allCourses.append(CS106B)

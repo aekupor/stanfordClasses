@@ -33,7 +33,14 @@
   .course {
     height: 100px;
     width: 100px;
+    /* background-color: pink; */
+  }
+
+  .course.Engr {
     background-color: pink;
+  }
+  .course.Other {
+    background-color: blue;
   }
 
   .button{
@@ -68,7 +75,7 @@
         <div class="innerColumn" style="background-color:#bbb;" ondrop="drop(event)" ondragover="allowDrop(event)">
           {%for course in allCourses%}
           {%if course.defaultQ == "1A"%}
-          <div class="course" id="{{course.title}}" draggable="true" ondragstart="drag(event)">
+          <div class="course {{course.subject}}" id="{{course.title}}" draggable="true" ondragstart="drag(event)">
             <div class="title">
               {{course.title}}
             </div>
@@ -79,7 +86,10 @@
               Type = {{course.subject}}
             </div>
             <div class="button">
-              <button type="button" data-toggle="popover" title="course here" data-content="And here's some amazing content. It's very engaging. Right?">View More</button>
+              <button type="button" data-toggle="popover"
+                title="course here"
+                data-content="And here's some amazing content. It's very engaging. Right?">
+                View More</button>
             </div>
           </div>
           {%endif%}
@@ -88,7 +98,7 @@
         <div class="innerColumn" style="background-color:#aaa;" ondrop="drop(event)" ondragover="allowDrop(event)">
         {%for course in allCourses%}
         {%if course.defaultQ == "1W"%}
-        <div class="course" id="{{course.title}}" draggable="true" ondragstart="drag(event)">
+        <div class="course {{course.subject}}" id="{{course.title}}" draggable="true" ondragstart="drag(event)">
           <div class="title">
             {{course.title}}
           </div>
@@ -99,7 +109,10 @@
             Type = {{course.subject}}
           </div>
           <div class="button">
-            <button type="button" data-toggle="popover" title="course here" data-content="And here's some amazing content. It's very engaging. Right?">View More</button>
+            <button type="button" data-toggle="popover"
+              title="course here"
+              data-content="And here's some amazing content. It's very engaging. Right?">
+              View More</button>
           </div>
         </div>
         {%endif%}
