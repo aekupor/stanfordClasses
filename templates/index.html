@@ -20,8 +20,13 @@
     ev.preventDefault();
     var data = ev.dataTransfer.getData("text");
     ev.target.appendChild(document.getElementById(data));
-    let c = document.getElementById("1A").children;
-    console.log(c);
+    let column = document.getElementById(ev.srcElement.id).children;
+    let course = document.getElementById(data).id;
+    console.log(course);
+    // console.log(course.getAttribute("hidden"));
+    // for (child = 0; child < column.length; child++) {
+    //   console.log(column[child]);
+    // }
   }
   </script>
 </head>
