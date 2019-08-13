@@ -3,58 +3,10 @@
 <head>
   <meta charset="utf-8">
   <title>Stanford CS Planner</title>
+  <link rel="stylesheet" href="../styles/index.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="../styles/index.css">
-  <style>
-  /* Popover */
-  .popover {
-    border: 2px dotted red;
-  }
-  /* Popover Header */
-  .popover-title {
-    background-color: #73AD21;
-    color: #FFFFFF;
-    font-size: 28px;
-    text-align:center;
-  }
-  /* Popover Body */
-  .popover-content {
-    background-color: coral;
-    color: #FFFFFF;
-    padding: 25px;
-  }
-  /* Popover Arrow */
-  .arrow {
-    border-right-color: red !important;
-  }
-
-  .course {
-    height: 100px;
-    width: 100px;
-    /* background-color: pink; */
-  }
-
-  .course.Engr {
-    background-color: pink;
-  }
-  .course.Other {
-    background-color: blue;
-  }
-  .course.MaSc {
-    background-color: green;
-  }
-
-  .button{
-    border: none;
-    color: black;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 10px;
-  }
-  </style>
   <script>
   function allowDrop(ev) {
     ev.preventDefault();
@@ -68,6 +20,8 @@
     ev.preventDefault();
     var data = ev.dataTransfer.getData("text");
     ev.target.appendChild(document.getElementById(data));
+    let c = document.getElementById("1A").children;
+    console.log(c);
   }
   </script>
 </head>
@@ -75,7 +29,7 @@
   <div class="row">
     <div class="column" style="background-color:#aaa;">
       <h2>Year 1</h2>
-        <div class="innerColumn" style="background-color:#bbb;" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <div class="innerColumn" id="1A" style="background-color:#bbb;" ondrop="drop(event)" ondragover="allowDrop(event)">
           {%for course in allCourses%}
           {%if course.defaultQ == "1A"%}
           <div class="course {{course.subject}}" id="{{course.title}}" draggable="true" ondragstart="drag(event)">
@@ -98,7 +52,7 @@
           {%endif%}
           {%endfor%}
         </div>
-        <div class="innerColumn" style="background-color:#aaa;" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <div class="innerColumn" id="1W" style="background-color:#aaa;" ondrop="drop(event)" ondragover="allowDrop(event)">
         {%for course in allCourses%}
         {%if course.defaultQ == "1W"%}
         <div class="course {{course.subject}}" id="{{course.title}}" draggable="true" ondragstart="drag(event)">
@@ -121,7 +75,7 @@
         {%endif%}
         {%endfor%}
         </div>
-        <div class="innerColumn" style="background-color:#bbb;" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="innerColumn" id="1S" style="background-color:#bbb;" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
     </div>
     <div class="column" style="background-color:#bbb;">
       <h2>Year 2</h2>
@@ -129,11 +83,10 @@
     </div>
   </div>
 
-
 <script>
-$(document).ready(function(){
-  $('[data-toggle="popover"]').popover();
-});
+  $(document).ready(function(){
+    $('[data-toggle="popover"]').popover();
+  });
 </script>
   <!-- <script type="text/javascript" src="../scripts/index.js"></script> -->
 </body>

@@ -35,3 +35,46 @@ body {
     width: 100%;
   }
 }
+
+/* Popover Header */
+.popover-title {
+  background-color: #73AD21;
+  color: black;
+  font-size: 28px;
+  text-align:center;
+}
+/* Popover Body */
+.popover-content {
+  background-color: coral;
+  color: #FFFFFF;
+  padding: 25px;
+}
+/* Popover Arrow */
+.arrow {
+  border-right-color: red !important;
+}
+
+.course {
+  height: 100px;
+  width: 100px;
+  /* background-color: pink; */
+}
+
+.course.Engr {
+  background-color: pink;
+}
+.course.Other {
+  background-color: blue;
+}
+.course.MaSc {
+  background-color: green;
+}
+
+.button{
+  border: none;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+}
