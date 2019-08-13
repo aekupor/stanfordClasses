@@ -8,19 +8,21 @@ jinja_env = jinja2.Environment(
 
 class Course:
     # add quarters offered, description, pre-reqs
-    def __init__(self, title, units, defaultQ, subject):
+    def __init__(self, title, units, defaultQ, subject, description, prereqs):
         self.title = title
         self.units = units
         self.defaultQ = defaultQ
         self.subject = subject
+        self.description = description
+        self.prereqs = prereqs
 
 allCourses = []
 
-CS106A = Course("CS106A", 5, "1A", "Engr")
+CS106A = Course("CS106A", 5, "1A", "Engr", "intro to programming", "none")
 allCourses.append(CS106A)
-other = Course("other", 5, "1A", "Other")
-allCourses.append(other)
-CS106B = Course("CS106B", 5, "1W", "Engr")
+think = Course("Think", 5, "1A", "Other", "required class", "none")
+allCourses.append(think)
+CS106B = Course("CS106B", 5, "1W", "Engr", "intro to programming part 2", "106A")
 allCourses.append(CS106B)
 
 class Home(webapp2.RequestHandler):

@@ -42,6 +42,9 @@
   .course.Other {
     background-color: blue;
   }
+  .course.MaSc {
+    background-color: green;
+  }
 
   .button{
     border: none;
@@ -87,8 +90,8 @@
             </div>
             <div class="button">
               <button type="button" data-toggle="popover"
-                title="course here"
-                data-content="And here's some amazing content. It's very engaging. Right?">
+                title="{{course.title}}"
+                data-content="Description: {{course.description}}. Pre-reqs: {{course.prereqs}}">
                 View More</button>
             </div>
           </div>
@@ -110,8 +113,8 @@
           </div>
           <div class="button">
             <button type="button" data-toggle="popover"
-              title="course here"
-              data-content="And here's some amazing content. It's very engaging. Right?">
+              title="{{course.title}}"
+              data-content="Description: {{course.description}}. Pre-reqs: {{course.prereqs}}">
               View More</button>
           </div>
         </div>
