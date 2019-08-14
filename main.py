@@ -25,6 +25,8 @@ think = Course("Think", 5, "1A", "Other", "required class", "none")
 allCourses.append(think)
 CS106B = Course("CS106B", 5, "1W", "Engr", "intro to programming part 2", "106A")
 allCourses.append(CS106B)
+CS107 = Course("CS107", 5, "1A", "Engr", "intro to programming part 3", "106A, 106B")
+allCourses.append(CS107)
 
 class Home(webapp2.RequestHandler):
     def get(self):
