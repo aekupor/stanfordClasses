@@ -7,28 +7,6 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-  <script>
-  function allowDrop(ev) {
-    ev.preventDefault();
-  }
-
-  function drag(ev) {
-    ev.dataTransfer.setData("text", ev.target.id);
-  }
-
-  function drop(ev) {
-    ev.preventDefault();
-    var data = ev.dataTransfer.getData("text");
-    ev.target.appendChild(document.getElementById(data));
-    let column = document.getElementById(ev.srcElement.id).children;
-    let course = document.getElementById(data).id;
-    console.log(course);
-    // console.log(course.getAttribute("hidden"));
-    // for (child = 0; child < column.length; child++) {
-    //   console.log(column[child]);
-    // }
-  }
-  </script>
 </head>
 <body>
   <div class="row">
@@ -86,6 +64,7 @@
       <h2>Year 2</h2>
       <p>Some text..</p>
     </div>
+    <!-- <button type="button" id="check" name="button">Check</button> -->
   </div>
 
 <script>
@@ -93,6 +72,6 @@
     $('[data-toggle="popover"]').popover();
   });
 </script>
-  <!-- <script type="text/javascript" src="../scripts/index.js"></script> -->
+<script type="text/javascript" src="../scripts/index.js"></script>
 </body>
 </html>
