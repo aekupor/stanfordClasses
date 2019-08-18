@@ -16,7 +16,6 @@
           {%for course in allCourses%}
           {%if course.defaultQ == "1A"%}
           <div class="course {{course.subject}}" id="{{course.title}}" draggable="true" ondragstart="drag(event)">
-            <span hidden>{{course.title}}</span>
             <div class="title">
               <p>{{course.title}}</p>
             </div>
@@ -40,7 +39,6 @@
         {%for course in allCourses%}
         {%if course.defaultQ == "1W"%}
         <div class="course {{course.subject}}" id="{{course.title}}" draggable="true" ondragstart="drag(event)">
-          <span hidden>{{course.title}}</span>
           <div class="title">
             <p>{{course.title}}</p>
           </div>
