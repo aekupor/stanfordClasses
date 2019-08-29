@@ -12,7 +12,7 @@
   <div class="row">
     <div class="column" style="background-color:#aaa;">
       <h2>Year 1</h2>
-        <div class="innerColumn" id="1A" style="background-color:#bbb;" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <div class="innerColumn" id="1A" ondrop="drop(event)" ondragover="allowDrop(event)">
           {%for course in allCourses%}
           {%if course.defaultQ == "1A"%}
           <div class="course {{course.subject}}" id="{{course.title}}" draggable="true" ondragstart="drag(event)">
@@ -35,36 +35,125 @@
           {%endif%}
           {%endfor%}
         </div>
-        <div class="innerColumn" id="1W" style="background-color:#aaa;" ondrop="drop(event)" ondragover="allowDrop(event)">
-        {%for course in allCourses%}
-        {%if course.defaultQ == "1W"%}
-        <div class="course {{course.subject}}" id="{{course.title}}" draggable="true" ondragstart="drag(event)">
-          <div class="title">
-            <p>{{course.title}}</p>
+        <div class="innerColumn" id="1W" ondrop="drop(event)" ondragover="allowDrop(event)">
+          {%for course in allCourses%}
+          {%if course.defaultQ == "1W"%}
+          <div class="course {{course.subject}}" id="{{course.title}}" draggable="true" ondragstart="drag(event)">
+            <div class="title">
+              <p>{{course.title}}</p>
+            </div>
+            <div class="units">
+              Units = {{course.units}}
+            </div>
+            <div class="type">
+              Type = {{course.subject}}
+            </div>
+            <div class="button">
+              <button type="button" data-toggle="popover"
+                title="{{course.title}}"
+                data-content="Description: {{course.description}}. Pre-reqs: {{course.prereqs}}">
+                View More</button>
+            </div>
           </div>
-          <div class="units">
-            Units = {{course.units}}
-          </div>
-          <div class="type">
-            Type = {{course.subject}}
-          </div>
-          <div class="button">
-            <button type="button" data-toggle="popover"
-              title="{{course.title}}"
-              data-content="Description: {{course.description}}. Pre-reqs: {{course.prereqs}}">
-              View More</button>
-          </div>
+          {%endif%}
+          {%endfor%}
         </div>
-        {%endif%}
-        {%endfor%}
+        <div class="innerColumn" id="1S" ondrop="drop(event)" ondragover="allowDrop(event)">
+          {%for course in allCourses%}
+          {%if course.defaultQ == "1S"%}
+          <div class="course {{course.subject}}" id="{{course.title}}" draggable="true" ondragstart="drag(event)">
+            <div class="title">
+              <p>{{course.title}}</p>
+            </div>
+            <div class="units">
+              Units = {{course.units}}
+            </div>
+            <div class="type">
+              Type = {{course.subject}}
+            </div>
+            <div class="button">
+              <button type="button" data-toggle="popover"
+                title="{{course.title}}"
+                data-content="Description: {{course.description}}. Pre-reqs: {{course.prereqs}}">
+                View More</button>
+            </div>
+          </div>
+          {%endif%}
+          {%endfor%}
         </div>
-        <div class="innerColumn" id="1S" style="background-color:#bbb;" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
     </div>
-    <div class="column" style="background-color:#bbb;">
+    <div class="column" style="background-color:#aaa;">
       <h2>Year 2</h2>
-      <p>Some text..</p>
+        <div class="innerColumn" id="2A" ondrop="drop(event)" ondragover="allowDrop(event)">
+          {%for course in allCourses%}
+          {%if course.defaultQ == "2A"%}
+          <div class="course {{course.subject}}" id="{{course.title}}" draggable="true" ondragstart="drag(event)">
+            <div class="title">
+              <p>{{course.title}}</p>
+            </div>
+            <div class="units">
+              Units = {{course.units}}
+            </div>
+            <div class="type">
+              Type = {{course.subject}}
+            </div>
+            <div class="button">
+              <button type="button" data-toggle="popover"
+                title="{{course.title}}"
+                data-content="Description: {{course.description}}. Pre-reqs: {{course.prereqs}}">
+                View More</button>
+            </div>
+          </div>
+          {%endif%}
+          {%endfor%}
+        </div>
+        <div class="innerColumn" id="2W" ondrop="drop(event)" ondragover="allowDrop(event)">
+          {%for course in allCourses%}
+          {%if course.defaultQ == "2W"%}
+          <div class="course {{course.subject}}" id="{{course.title}}" draggable="true" ondragstart="drag(event)">
+            <div class="title">
+              <p>{{course.title}}</p>
+            </div>
+            <div class="units">
+              Units = {{course.units}}
+            </div>
+            <div class="type">
+              Type = {{course.subject}}
+            </div>
+            <div class="button">
+              <button type="button" data-toggle="popover"
+                title="{{course.title}}"
+                data-content="Description: {{course.description}}. Pre-reqs: {{course.prereqs}}">
+                View More</button>
+            </div>
+          </div>
+          {%endif%}
+          {%endfor%}
+        </div>
+        <div class="innerColumn" id="2S" ondrop="drop(event)" ondragover="allowDrop(event)">
+          {%for course in allCourses%}
+          {%if course.defaultQ == "2S"%}
+          <div class="course {{course.subject}}" id="{{course.title}}" draggable="true" ondragstart="drag(event)">
+            <div class="title">
+              <p>{{course.title}}</p>
+            </div>
+            <div class="units">
+              Units = {{course.units}}
+            </div>
+            <div class="type">
+              Type = {{course.subject}}
+            </div>
+            <div class="button">
+              <button type="button" data-toggle="popover"
+                title="{{course.title}}"
+                data-content="Description: {{course.description}}. Pre-reqs: {{course.prereqs}}">
+                View More</button>
+            </div>
+          </div>
+          {%endif%}
+          {%endfor%}
+        </div>
     </div>
-    <!-- <button type="button" id="check" name="button">Check</button> -->
   </div>
 
 <script>

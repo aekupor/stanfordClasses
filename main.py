@@ -25,7 +25,7 @@ think = Course("Think", 5, "1A", "Other", "required class", "none")
 allCourses.append(think)
 CS106B = Course("CS106B", 5, "1W", "Engr", "intro to programming part 2", "CS106A")
 allCourses.append(CS106B)
-CS107 = Course("CS107", 5, "1A", "Engr", "intro to programming part 3", "CS106A CS106B")
+CS107 = Course("CS107", 5, "1S", "Engr", "intro to programming part 3", "CS106A CS106B")
 allCourses.append(CS107)
 
 class Home(webapp2.RequestHandler):
@@ -35,7 +35,6 @@ class Home(webapp2.RequestHandler):
         }
         template = jinja_env.get_template('templates/index.html')
         self.response.write(template.render(template_vars))
-        # self.response.write(json.dumps(template_vars))
 
 app=webapp2.WSGIApplication([
     ('/', Home),
