@@ -6,7 +6,7 @@ function drag(ev) {
   ev.dataTransfer.setData("text", ev.target.id);
 }
 
-let columnOrder = ["1A", "1W", "1S"];
+let columnOrder = ["1A", "1W", "1S", "2A", "2W", "2S"];
 let data = "";
 let column = "";
 let course = "";
@@ -46,7 +46,7 @@ function drop(ev) {
       }
     }
   }
-  if (prereqs != "none") {
+  if ((prereqs == "none") == false) {
     for (counter = 0; counter < prereqs.length; counter++) {
       prereqsMade = false;
       for (counter1 = 0; counter1 < coursesBefore.length; counter1++){
@@ -60,4 +60,5 @@ function drop(ev) {
       }
     }
   }
+  coursesBefore=[];
 }
