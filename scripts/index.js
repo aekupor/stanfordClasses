@@ -46,17 +46,18 @@ function drop(ev) {
       }
     }
   }
-  // TODO: check for case when there are no prereqs
-  for (counter = 0; counter < prereqs.length; counter++) {
-    prereqsMade = false;
-    for (counter1 = 0; counter1 < coursesBefore.length; counter1++){
-      if (prereqs[counter] == coursesBefore[counter1]) {
-        prereqsMade = true;
-        break;
+  if (prereqs != "none") {
+    for (counter = 0; counter < prereqs.length; counter++) {
+      prereqsMade = false;
+      for (counter1 = 0; counter1 < coursesBefore.length; counter1++){
+        if (prereqs[counter] == coursesBefore[counter1]) {
+          prereqsMade = true;
+          break;
+        }
       }
-    }
-    if (prereqsMade == false){
-      alert("the pre-reqs of this class have not been fulfilled");
+      if (prereqsMade == false){
+        alert("the pre-reqs of this class have not been fulfilled. please move it back");
+      }
     }
   }
 }
