@@ -10,8 +10,13 @@
 </head>
 <body>
   <div class="row">
-    <div class="column" style="background-color:#aaa;">
+    <div class="column">
       <h2>Year 1</h2>
+      <div class="headers">
+        <h4>Autumn</h4>
+        <h4>Winter</h4>
+        <h4>Spring</h4>
+      </div>
         <div class="innerColumn" id="1A" ondrop="drop(event)" ondragover="allowDrop(event)">
           {%for course in allCourses%}
           {%if course.defaultQ == "1A"%}
@@ -82,8 +87,13 @@
           {%endfor%}
         </div>
     </div>
-    <div class="column" style="background-color:#aaa;">
+    <div class="column">
       <h2>Year 2</h2>
+      <div class="headers">
+        <h4>Autumn</h4>
+        <h4>Winter</h4>
+        <h4>Spring</h4>
+      </div>
         <div class="innerColumn" id="2A" ondrop="drop(event)" ondragover="allowDrop(event)">
           {%for course in allCourses%}
           {%if course.defaultQ == "2A"%}

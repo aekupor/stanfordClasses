@@ -8,7 +8,7 @@ jinja_env = jinja2.Environment(
 )
 
 class Course:
-    # add quarters offered, description, pre-reqs
+    # TODO: add courses that have that course as a prereq so can check when moving
     def __init__(self, title, units, defaultQ, subject, description, prereqs):
         self.title = title
         self.units = units

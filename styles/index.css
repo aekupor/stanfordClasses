@@ -4,13 +4,27 @@ body {
   box-sizing: border-box;
 }
 
-/* Create two equal columns that floats next to each other */
+h2 {
+  text-align: center;
+}
+
+h4 {
+  text-align: center;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.headers {
+  display: flex;
+  justify-content: space-around;
+}
+
 .column {
   float: left;
   width: 400px;
-  height: 300px;
+  height: 450px;
   padding: 10px;
-  /* height: 300px; /* Should be removed. Only for demonstration */ */
+  background-color:#aaa
 }
 
 .innerColumn{
@@ -21,38 +35,32 @@ body {
   border-style: solid;
   border-color: black;
   background-color: white;
-  /* height: 200px; */
 }
 
 
-/* Clear floats after the columns */
 .row:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
   .column {
     width: 100%;
   }
 }
 
-/* Popover Header */
 .popover-title {
   background-color: #73AD21;
   color: black;
   font-size: 28px;
   text-align:center;
 }
-/* Popover Body */
 .popover-content {
   background-color: coral;
   color: #FFFFFF;
   padding: 25px;
 }
-/* Popover Arrow */
 .arrow {
   border-right-color: red !important;
 }
@@ -60,7 +68,7 @@ body {
 .course {
   height: 100px;
   width: 100px;
-  /* background-color: pink; */
+  margin-bottom: 5px;
 }
 
 .course.Engr {
