@@ -9,7 +9,6 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-  <div class="row">
     <div class="column">
       <h2>Year 1</h2>
       <div class="headers">
@@ -163,8 +162,159 @@
           {%endif%}
           {%endfor%}
         </div>
+    </div><div class="column">
+      <h2>Year 3</h2>
+      <div class="headers">
+        <h4>Autumn</h4>
+        <h4>Winter</h4>
+        <h4>Spring</h4>
+      </div>
+        <div class="innerColumn" id="3A" ondrop="drop(event)" ondragover="allowDrop(event)">
+          {%for course in allCourses%}
+          {%if course.defaultQ == "3A"%}
+          <div class="course {{course.subject}}" id="{{course.title}}" draggable="true" ondragstart="drag(event)">
+            <div class="title">
+              <p>{{course.title}}</p>
+            </div>
+            <div class="units">
+              Units = {{course.units}}
+            </div>
+            <div class="type">
+              Type = {{course.subject}}
+            </div>
+            <div class="button">
+              <button type="button" data-toggle="popover"
+                title="{{course.title}}"
+                data-content="Description: {{course.description}}. Pre-reqs: {{course.prereqs}}">
+                View More</button>
+            </div>
+          </div>
+          {%endif%}
+          {%endfor%}
+        </div>
+        <div class="innerColumn" id="3W" ondrop="drop(event)" ondragover="allowDrop(event)">
+          {%for course in allCourses%}
+          {%if course.defaultQ == "3W"%}
+          <div class="course {{course.subject}}" id="{{course.title}}" draggable="true" ondragstart="drag(event)">
+            <div class="title">
+              <p>{{course.title}}</p>
+            </div>
+            <div class="units">
+              Units = {{course.units}}
+            </div>
+            <div class="type">
+              Type = {{course.subject}}
+            </div>
+            <div class="button">
+              <button type="button" data-toggle="popover"
+                title="{{course.title}}"
+                data-content="Description: {{course.description}}. Pre-reqs: {{course.prereqs}}">
+                View More</button>
+            </div>
+          </div>
+          {%endif%}
+          {%endfor%}
+        </div>
+        <div class="innerColumn" id="3S" ondrop="drop(event)" ondragover="allowDrop(event)">
+          {%for course in allCourses%}
+          {%if course.defaultQ == "3S"%}
+          <div class="course {{course.subject}}" id="{{course.title}}" draggable="true" ondragstart="drag(event)">
+            <div class="title">
+              <p>{{course.title}}</p>
+            </div>
+            <div class="units">
+              Units = {{course.units}}
+            </div>
+            <div class="type">
+              Type = {{course.subject}}
+            </div>
+            <div class="button">
+              <button type="button" data-toggle="popover"
+                title="{{course.title}}"
+                data-content="Description: {{course.description}}. Pre-reqs: {{course.prereqs}}">
+                View More</button>
+            </div>
+          </div>
+          {%endif%}
+          {%endfor%}
+        </div>
+    </div><div class="column">
+      <h2>Year 4</h2>
+      <div class="headers">
+        <h4>Autumn</h4>
+        <h4>Winter</h4>
+        <h4>Spring</h4>
+      </div>
+        <div class="innerColumn" id="4A" ondrop="drop(event)" ondragover="allowDrop(event)">
+          {%for course in allCourses%}
+          {%if course.defaultQ == "4A"%}
+          <div class="course {{course.subject}}" id="{{course.title}}" draggable="true" ondragstart="drag(event)">
+            <div class="title">
+              <p>{{course.title}}</p>
+            </div>
+            <div class="units">
+              Units = {{course.units}}
+            </div>
+            <div class="type">
+              Type = {{course.subject}}
+            </div>
+            <div class="button">
+              <button type="button" data-toggle="popover"
+                title="{{course.title}}"
+                data-content="Description: {{course.description}}. Pre-reqs: {{course.prereqs}}">
+                View More</button>
+            </div>
+          </div>
+          {%endif%}
+          {%endfor%}
+        </div>
+        <div class="innerColumn" id="4W" ondrop="drop(event)" ondragover="allowDrop(event)">
+          {%for course in allCourses%}
+          {%if course.defaultQ == "4W"%}
+          <div class="course {{course.subject}}" id="{{course.title}}" draggable="true" ondragstart="drag(event)">
+            <div class="title">
+              <p>{{course.title}}</p>
+            </div>
+            <div class="units">
+              Units = {{course.units}}
+            </div>
+            <div class="type">
+              Type = {{course.subject}}
+            </div>
+            <div class="button">
+              <button type="button" data-toggle="popover"
+                title="{{course.title}}"
+                data-content="Description: {{course.description}}. Pre-reqs: {{course.prereqs}}">
+                View More</button>
+            </div>
+          </div>
+          {%endif%}
+          {%endfor%}
+        </div>
+        <div class="innerColumn" id="4S" ondrop="drop(event)" ondragover="allowDrop(event)">
+          {%for course in allCourses%}
+          {%if course.defaultQ == "4S"%}
+          <div class="course {{course.subject}}" id="{{course.title}}" draggable="true" ondragstart="drag(event)">
+            <div class="title">
+              <p>{{course.title}}</p>
+            </div>
+            <div class="units">
+              Units = {{course.units}}
+            </div>
+            <div class="type">
+              Type = {{course.subject}}
+            </div>
+            <div class="button">
+              <button type="button" data-toggle="popover"
+                title="{{course.title}}"
+                data-content="Description: {{course.description}}. Pre-reqs: {{course.prereqs}}">
+                View More</button>
+            </div>
+          </div>
+          {%endif%}
+          {%endfor%}
+        </div>
     </div>
-  </div>
 
 <script>
   $(document).ready(function(){

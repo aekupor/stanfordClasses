@@ -6,7 +6,7 @@ function drag(ev) {
   ev.dataTransfer.setData("text", ev.target.id);
 }
 
-let columnOrder = ["1A", "1W", "1S", "2A", "2W", "2S"];
+let columnOrder = ["1A", "1W", "1S", "2A", "2W", "2S", "3A", "3W", "3S", "4A", "4W", "4S",];
 let data = "";
 let column = "";
 let course = "";

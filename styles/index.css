@@ -24,7 +24,7 @@ h4 {
   width: 400px;
   height: 450px;
   padding: 10px;
-  background-color:#aaa
+  background-color:#aaa;
 }
 
 .innerColumn{
@@ -42,12 +42,6 @@ h4 {
   content: "";
   display: table;
   clear: both;
-}
-
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-  }
 }
 
 .popover-title {
