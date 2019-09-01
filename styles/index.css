@@ -20,7 +20,7 @@ h4 {
 .column {
   float: left;
   width: 400px;
-  height: 450px;
+  height: 620px;
   padding: 10px;
   background-color: #aaa;
 }
@@ -28,7 +28,7 @@ h4 {
 .innerColumn{
   float: left;
   width: 33%;
-  height: 300px;
+  height: 470px;
   padding: 10px;
   border-style: solid;
   border-color: black;
