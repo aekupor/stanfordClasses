@@ -1,10 +1,8 @@
 body {
-}
-* {
-  box-sizing: border-box;
+  background-color: #aaa;
 }
 
-h2 {
+h2, h1 {
   text-align: center;
 }
 
@@ -24,7 +22,7 @@ h4 {
   width: 400px;
   height: 450px;
   padding: 10px;
-  background-color:#aaa;
+  background-color: #aaa;
 }
 
 .innerColumn{
@@ -36,7 +34,6 @@ h4 {
   border-color: black;
   background-color: white;
 }
-
 
 .row:after {
   content: "";
@@ -51,12 +48,9 @@ h4 {
   text-align:center;
 }
 .popover-content {
-  background-color: coral;
+  background-color: #58615d;
   color: #FFFFFF;
   padding: 25px;
-}
-.arrow {
-  border-right-color: red !important;
 }
 
 .course {
@@ -69,10 +63,10 @@ h4 {
   background-color: pink;
 }
 .course.Other {
-  background-color: blue;
+  background-color: lightblue;
 }
 .course.MaSc {
-  background-color: green;
+  background-color: lightgreen;
 }
 
 .button{
